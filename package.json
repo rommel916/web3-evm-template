@@ -22,9 +22,7 @@
   },
   "scripts": {
     "dev": "NODE_ENV=development webpack serve -c webpack.dev.js",
-    "build": "NODE_ENV=production webpack -c webpack.prod.js",
-    "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,scss,stylus,html,md}\"",
-    "lint:eslint": "eslint --fix --ext .js,.ts,.tsx ./src --max-warnings=0"
+    "build": "NODE_ENV=production webpack -c webpack.prod.js"
   },
   "husky": {
     "hooks": {
