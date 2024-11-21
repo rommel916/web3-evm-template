@@ -1,7 +1,7 @@
 import homeStyles from './index.module.scss'
 
 const Home = () => {
-  console.log(aa)
+  console.log(aa1)
   return (
     <div className={homeStyles.home}>
       H0me
