@@ -1,0 +1,1 @@
+(self.webpackChunkweb3_evm_template=self.webpackChunkweb3_evm_template||[]).push([[147],{5340:()=>{},9838:()=>{}}]);
