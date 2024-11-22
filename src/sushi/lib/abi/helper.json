@@ -1,0 +1,312 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token_",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user_",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "asset_",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "farm_",
+        "type": "address"
+      }
+    ],
+    "name": "_underlyingToken",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "balance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "allowance",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ApproveData",
+        "name": "data",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "token",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user_",
+        "type": "address"
+      },
+      {
+        "internalType": "address[]",
+        "name": "tokens_",
+        "type": "address[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "target",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct ApproveInput[]",
+        "name": "approves_",
+        "type": "tuple[]"
+      },
+      {
+        "internalType": "address",
+        "name": "farm_",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "pids_",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "address[]",
+        "name": "dao_",
+        "type": "address[]"
+      }
+    ],
+    "name": "userInfo",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "nativeBalance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenBalance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "balance",
+            "type": "uint256[]"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "balance",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "allowance",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ApproveData[]",
+            "name": "approve",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "veTokenBalance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenLocked",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint48",
+                "name": "unlockTime",
+                "type": "uint48"
+              },
+              {
+                "internalType": "uint104",
+                "name": "belaAmount",
+                "type": "uint104"
+              },
+              {
+                "internalType": "uint104",
+                "name": "veTokenAmount",
+                "type": "uint104"
+              }
+            ],
+            "internalType": "struct Breeding[]",
+            "name": "breedings",
+            "type": "tuple[]"
+          }
+        ],
+        "internalType": "struct WombatHelper.UserGlobalData",
+        "name": "userGlobal",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "lpToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "underlyingToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "pid",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "factor",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "pending",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "balance",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "allowance",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ApproveData",
+            "name": "lpTokenInfo",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "balance",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "allowance",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ApproveData",
+            "name": "underlyingTokenInfo",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct WombatHelper.FarmData[]",
+        "name": "userFarm",
+        "type": "tuple[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "balance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "allowance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "staking",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "withdrawAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "withdrawReleaseTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "pending",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "address[]",
+            "name": "earnedToken",
+            "type": "address[]"
+          }
+        ],
+        "internalType": "struct SonneDaoInfo[]",
+        "name": "daoinfo",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

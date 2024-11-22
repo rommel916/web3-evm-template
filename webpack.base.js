@@ -28,7 +28,7 @@ const baseConfig = {
   entry: path.join(__dirname, "src/index.tsx"), // 入口文件
   // 打包出口文件
   output: {
-    filename: 'static/js/[name].[chunkhash:8].js', // // 加上[chunkhash:8]
+    filename: "static/js/[name].[chunkhash:8].js", // // 加上[chunkhash:8]
     path: path.join(__dirname, "dist"), // 打包结果输出路径
     clean: true, // webpack4需要配置clean-webpack-plugin来删除dist文件,webpack5内置了
     publicPath: "/", // 打包后文件的公共前缀路径
@@ -52,6 +52,9 @@ const baseConfig = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js"],
+    alias: {
+      "@src": path.join(__dirname, "/src"),
+    },
   },
   // plugins
   plugins: [

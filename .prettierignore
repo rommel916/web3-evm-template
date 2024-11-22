@@ -1,7 +1,0 @@
-// .prettierignore
-node_modules
-dist
-env
-.gitignore
-pnpm-lock.yaml
-README.md
