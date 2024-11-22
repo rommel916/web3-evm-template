@@ -1,14 +1,17 @@
 # Eth 链开发模版
 
-1. 技术栈
-   React、TypeScript、React-Redux、Webpack5、Sass
-2. Web3 插件
-   web3、@web3-react/core（获取钱包登陆信息）、@web3-onboard/react（登陆插件）
+## 技术栈
 
-3. 快速开发
-   Node > 20
-   Web3-Onboard官网: url[https://onboard.blocknative.com/docs/overview/introduction]
-   
+React、TypeScript、React-Redux、Webpack5、Sass
+
+## Web3
+
+web3、@web3-react/core（获取钱包登陆信息）、@web3-onboard/react（登陆插件）
+
+## 快速开发
+
+Node > 20
+Web3-Onboard 官网: [url](https://onboard.blocknative.com/docs/overview/introduction)
 
 ## 项目架构
 
