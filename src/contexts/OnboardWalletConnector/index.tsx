@@ -12,72 +12,72 @@ const okx = okxModule();
 
 // initialize the module with options
 const metamask = metamaskModule({
-    options: {
-        extensionOnly: false,
-        dappMetadata: {
-            name: 'Web3Onboard'
-        }
+  options: {
+    extensionOnly: false,
+    dappMetadata: {
+      name: 'Web3Onboard'
     }
+  }
 });
 
 const wallets = [metamask, okx, coinbase];
 
 const chains = [
-    {
-        id: '0x1',
-        token: 'ETH',
-        label: 'Ethereum Mainnet',
-        rpcUrl: `https://1rpc.io/eth`
-    },
-    {
-        id: 11155111,
-        token: 'ETH',
-        label: 'Sepolia',
-        rpcUrl: 'https://rpc.sepolia.org/'
-    },
-    {
-        id: '0x13881',
-        token: 'MATIC',
-        label: 'Polygon - Mumbai',
-        rpcUrl: 'https://matic-mumbai.chainstacklabs.com'
-    },
-    {
-        id: 80002,
-        token: 'MATIC',
-        label: 'Amoy',
-        rpcUrl: chainRPCs['80002']
-    }
+  {
+    id: '0x1',
+    token: 'ETH',
+    label: 'Ethereum Mainnet',
+    rpcUrl: `https://1rpc.io/eth`
+  },
+  {
+    id: 11155111,
+    token: 'ETH',
+    label: 'Sepolia',
+    rpcUrl: 'https://rpc.sepolia.org/'
+  },
+  {
+    id: '0x13881',
+    token: 'MATIC',
+    label: 'Polygon - Mumbai',
+    rpcUrl: 'https://matic-mumbai.chainstacklabs.com'
+  },
+  {
+    id: 80002,
+    token: 'MATIC',
+    label: 'Amoy',
+    rpcUrl: chainRPCs['80002']
+  }
 ];
 
 const appMetadata = {
-    name: 'Connect Wallet Module',
-    description: 'pump connect a wallet.',
-    recommendedInjectedWallets: [
-        { name: 'MetaMask', url: 'https://metamask.io' },
-        { name: 'Okx', url: 'https://www.okx.com/' }
-    ]
+  name: 'Connect Wallet Module',
+  description: 'pump connect a wallet.',
+  recommendedInjectedWallets: [
+    { name: 'MetaMask', url: 'https://metamask.io' },
+    { name: 'Okx', url: 'https://www.okx.com/' }
+  ]
 };
 
 const web3Onboard = init({
-    wallets,
-    chains,
-    appMetadata,
-    connect: {
-        autoConnectAllPreviousWallet: true
+  wallets,
+  chains,
+  appMetadata,
+  connect: {
+    autoConnectAllPreviousWallet: true
+  },
+  accountCenter: {
+    desktop: {
+      enabled: false
     },
-    accountCenter: {
-        desktop: {
-            enabled: false
-        },
-        mobile: {
-            enabled: false
-        }
-    },
-    theme: 'dark'
+    mobile: {
+      enabled: false
+    }
+  },
+  theme: 'dark'
 });
 
 const OnboardWalletConnectorProvider: React.FC<{ children?: ReactNode }> = ({ children }) => {
-    return <Web3OnboardProvider web3Onboard={web3Onboard}>{children}</Web3OnboardProvider>;
+  return <Web3OnboardProvider web3Onboard={web3Onboard}>{children}</Web3OnboardProvider>;
 };
 
 export default OnboardWalletConnectorProvider;
