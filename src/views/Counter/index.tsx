@@ -6,7 +6,7 @@ import {
   increment,
   incrementByAmount,
   incrementAsync,
-  incrementIfOdd,
+  incrementIfOdd
   selectCount,
 } from '../../redux/features/counter/counterSlice';
 import styles from './index.module.scss';

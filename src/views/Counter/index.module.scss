@@ -1,10 +1,11 @@
 .row {
   display: flex;
+  margin-top: 20px;
   align-items: center;
   justify-content: center;
 }
 
-.row > button {
+.row>button {
   margin-left: 4px;
   margin-right: 8px;
 }

@@ -1,12 +1,12 @@
-# ！！！⚠️注意 ⚠️！！！
+# ⚠️ 注意 ⚠️
 
-此仓库安装 npm 自动发包配置，不需要请删除，连带 package.json 的 scritps 的 release 删除
+此仓库安装 npm 自动发包配置，不需要请删除，连带 package.json 的 scritps 的 release
 
 # Eth 链开发模版
 
 ## 技术栈
 
-React、TypeScript、React-Redux、Webpack5、Sass
+React、TypeScript、React-Redux、Webpack5、Sass、Antd
 
 ## Web3
 

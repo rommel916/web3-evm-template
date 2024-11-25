@@ -1,26 +1,38 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom'
 import Counter from '../src/views/Counter';
+import Mark from '../src/views/Mark';
 import TopBar from '../src/components/TopBar';
+import Footer from '../src/components/Footer';
 import SushiProvider from '../src/contexts/SushiProvider'
 import OnboardWalletConnectorProvider from '../src/contexts/OnboardWalletConnector';
-import './App.css';
+import styles from './App.css';
 
-function App() {
-  return (
-    <div className='app'>
-      <OnboardWalletConnectorProvider>
-        <SushiProvider>
-          <header>
-            <TopBar />
-          </header>
-          <main>
+const App = () => {
+  const Layout = () => {
+    return <div className={styles.container}>
+      <TopBar />
+      <div>
+        <Routes>
+          <Route path="/" element={
             <Counter />
-          </main>
-        </SushiProvider>
-      </OnboardWalletConnectorProvider>
-
+          } />
+          <Route path="/mark" element={
+            <Mark />
+          } />
+        </Routes>
+      </div>
+      <Footer />
     </div>
+  };
+
+  return (
+    <OnboardWalletConnectorProvider>
+      <SushiProvider>
+        <Layout />
+      </SushiProvider>
+    </OnboardWalletConnectorProvider>
   );
-}
+};
 
 export default App;

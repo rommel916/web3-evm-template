@@ -173,7 +173,7 @@ function gitOperations(newVersion) {
     const branchName = execSync("git rev-parse --abbrev-ref HEAD")
       .toString()
       .trim();
-
+      
     // 检查是否有设置 upstream（远程跟踪分支）
     let setUpstream = false;
     try {
