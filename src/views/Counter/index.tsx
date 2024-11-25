@@ -6,13 +6,13 @@ import {
   increment,
   incrementByAmount,
   incrementAsync,
-  incrementIfOdd
+  incrementIfOdd,
   selectCount,
 } from '../../redux/features/counter/counterSlice';
 import styles from './index.module.scss';
 
 const Counter = () => {
-  const count = useAppSelector(selectCount);
+  const count = useAppSelector(selectCount)
   const dispatch = useAppDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
 
