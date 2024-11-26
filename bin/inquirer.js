@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const template = require('./template');
 
 function inquirerPrompt(argv) {
     const { name } = argv;
@@ -22,67 +23,13 @@ function inquirerPrompt(argv) {
                 },
                 {
                     type: 'list',
-                    name: 'type',
-                    message: '模板类型',
-                    choices: ['表单', '动态表单', '嵌套表单'],
-                    filter: function(value) {
-                        return {
-                            表单: 'form',
-                            动态表单: 'dynamicForm',
-                            嵌套表单: 'nestedForm'
-                        }[value];
-                    }
-                },
-                {
-                    type: 'list',
-                    message: '使用什么框架开发',
-                    choices: ['react', 'vue'],
-                    name: 'frame'
+                    message: '选择开发模版',
+                    choices: template,
+                    name: 'template'
                 }
             ])
             .then(answers => {
-                const { frame } = answers;
-                if (frame === 'react') {
-                    inquirer
-                        .prompt([
-                            {
-                                type: 'list',
-                                message: '使用什么UI组件库开发',
-                                choices: ['Ant Design'],
-                                name: 'library'
-                            }
-                        ])
-                        .then(answers1 => {
-                            resolve({
-                                ...answers,
-                                ...answers1
-                            });
-                        })
-                        .catch(error => {
-                            reject(error);
-                        });
-                }
-
-                if (frame === 'vue') {
-                    inquirer
-                        .prompt([
-                            {
-                                type: 'list',
-                                message: '使用什么UI组件库开发',
-                                choices: ['Element'],
-                                name: 'library'
-                            }
-                        ])
-                        .then(answers2 => {
-                            resolve({
-                                ...answers,
-                                ...answers2
-                            });
-                        })
-                        .catch(error => {
-                            reject(error);
-                        });
-                }
+                resolve(answers);
             })
             .catch(error => {
                 reject(error);

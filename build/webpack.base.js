@@ -53,7 +53,7 @@ const baseConfig = {
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js"],
     alias: {
-      "@src": path.join(__dirname, "../src"),
+      '@': path.join(__dirname, '../src'),
     },
   },
   // plugins
